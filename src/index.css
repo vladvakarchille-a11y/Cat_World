@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-cream-soft text-ink font-sans antialiased; }
+h1, h2, h3, h4 { @apply font-serif; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F6F1E8; }
+::-webkit-scrollbar-thumb { background: #C5A46D; border-radius: 4px; }
+
+.site-header { background: rgb(251 248 242 / 95%); }
+.nav-link { @apply rounded-full px-4 py-2 text-sm font-medium text-ink transition-colors hover:text-gold; }
+.nav-link-active { @apply bg-forest text-cream hover:text-cream; }
+.language-select, .icon-button { @apply rounded-full border border-forest/15 bg-white px-3 py-2 text-forest transition hover:border-gold; }
+.icon-button { @apply inline-flex items-center justify-center p-2; }
+.mobile-nav { @apply border-t border-forest/10 bg-cream-soft px-6 py-3; }
+.mobile-nav-link { @apply block w-full py-3 text-left font-medium text-ink; }
+.carousel-control { @apply rounded-full border border-white/50 bg-black/20 p-2 text-white transition hover:bg-black/40; }
+.carousel-dot { @apply h-2.5 w-2.5 rounded-full bg-white/60 transition; }
+.carousel-dot-active { @apply w-7 bg-gold; }
+
+html { scroll-behavior: smooth; }
+html.dark body { background: #151a17; color: #eee9df; }
+html.dark .site-header { background: rgb(21 26 23 / 95%); }
+html.dark .bg-white,
+html.dark .language-select,
+html.dark .icon-button { background-color: #232b27; color: #eee9df; }
+html.dark .bg-cream,
+html.dark .bg-cream-soft,
+html.dark .mobile-nav { background-color: #1b221e; }
+html.dark .text-forest,
+html.dark .text-ink,
+html.dark [class~="text-ink/70"] { color: #eee9df; }
+html.dark [class~="border-forest/10"],
+html.dark [class~="border-forest/15"] { border-color: rgb(238 233 223 / 15%); }
+html.dark ::-webkit-scrollbar-track { background: #1b221e; }
